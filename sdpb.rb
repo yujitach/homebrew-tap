@@ -6,7 +6,7 @@ class Sdpb < Formula
 
   depends_on "gmp"
   depends_on "boost"
-  depends_on "clang-omp"
+  depends_on "homebrew/boneyard/clang-omp"
 
   def install
     ENV['CLANG']="1"
