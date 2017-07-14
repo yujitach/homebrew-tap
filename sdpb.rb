@@ -1,16 +1,15 @@
 class Sdpb < Formula
   homepage "https://github.com/yujitach/sdpb"
-  url "https://github.com/yujitach/sdpb/archive/0.0.1.tar.gz"
-  version "0.0.1"
-  sha256 "57e5fc1656af4d0a47a504821bbb5bbfc41fe23564d5c246cce6fb21cef03a53"
+  url "https://github.com/yujitach/sdpb/archive/0.0.2.tar.gz"
+  version "0.0.2"
+  sha256 "1d3e8c9106b7ad81f5a013445537bec8e31c8e9921525899e76bf80b5841687d"
 
   depends_on "gmp"
   depends_on "boost"
-  depends_on "homebrew/boneyard/clang-omp"
+  depends_on "llvm"
 
   def install
     ENV['CLANG']="1"
-    ENV['CPATH']="/usr/local/include/libiomp"
     system "make"
     bin.install "sdpb" 
   end
